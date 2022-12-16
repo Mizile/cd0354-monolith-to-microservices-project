@@ -1,7 +1,11 @@
 version: "3"
 services:
   reverseproxy:
+<<<<<<< HEAD
       image: reverseproxy:v3
+=======
+      image: reverseproxy
+>>>>>>> deploy
       ports:
           - 8080:8080
       restart: always
@@ -9,7 +13,11 @@ services:
         - api-user
         - api-feed
   api-user:
+<<<<<<< HEAD
     image: udagram-api-user:v3
+=======
+    image: udagram-api-user
+>>>>>>> deploy
     environment:
       POSTGRES_USERNAME: mizile
       POSTGRES_PASSWORD: mizile123
@@ -21,7 +29,11 @@ services:
       JWT_SECRET: testing
       URL: "http://localhost:8100"
   api-feed:
+<<<<<<< HEAD
     image: udagram-api-feed:v3
+=======
+    image: udagram-api-feed
+>>>>>>> deploy
     volumes:
       - $HOME/.aws:/root/.aws
     environment:
@@ -35,6 +47,10 @@ services:
       JWT_SECRET: testing
       URL: "http://localhost:8100"
   frontend:
+<<<<<<< HEAD
     image: udagram-frontend:v3
+=======
+    image: udagram-frontend
+>>>>>>> deploy
     ports:
       - "8100:80"

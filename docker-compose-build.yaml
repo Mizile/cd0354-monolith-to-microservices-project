@@ -3,6 +3,7 @@ services:
   reverseproxy:
     build:
       context: ./udagram-reverseproxy
+<<<<<<< HEAD
     image: reverseproxy:v3
   api_user:
     build:
@@ -16,3 +17,18 @@ services:
     build:
       context: ./udagram-frontend
     image: udagram-frontend:v3
+=======
+    image: reverseproxy
+  api_user:
+    build:
+      context: ./udagram-api-user
+    image: udagram-api-user
+  api_feed:
+    build:
+      context: ./udagram-api-feed
+    image: udagram-api-feed
+  frontend:
+    build:
+      context: ./udagram-frontend
+    image: udagram-frontend
+>>>>>>> deploy
